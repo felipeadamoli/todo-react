@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 import { Box } from 'gestalt';
 import Todo from '../Todo/Todo';
 
-class TodoList extends Component {
-    render() {
+export default (props) => {
         return (
             <Box color="white"> 
                 {
-                    this.props.tarefas.map((todo) => <Todo key={todo.id} handleChange={this.props.handleChange} tarefa={todo} />)
+                    props.tarefas.map((todo) => <Todo key={todo.id} handleChange={props.handleChange} tarefa={todo} />)
                 }
             </ Box> 
         );
-    }
 }
-
-export default TodoList;
